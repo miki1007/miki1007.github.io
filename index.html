@@ -11,17 +11,37 @@
 <meta property="og:url" content="https://miki1007.github.io" />
 <meta property="og:image" content="https://miki1007.github.io/portrait.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://miki1007.github.io" />
+<meta name="theme-color" content="#0c0b0a" />
+<meta name="author" content="Mikias Bayle Derseh" />
+<meta name="keywords" content="Mikias Bayle Derseh, Software Engineer, Flutter Developer, Firebase, Python, Data Analytics, Ethiopia, Addis Ababa, Mobile Developer" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230c0b0a'/%3E%3Ctext x='50' y='71' font-family='Georgia,serif' font-size='62' font-style='italic' fill='%23e6b34c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230c0b0a'/%3E%3Ctext x='50' y='71' font-family='Georgia,serif' font-size='62' font-style='italic' fill='%23e6b34c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Mikias Bayle Derseh",
+  "jobTitle":"Software Engineer",
+  "url":"https://miki1007.github.io",
+  "email":"mailto:mikiyasbaile4@gmail.com",
+  "image":"https://miki1007.github.io/portrait.jpg",
+  "address":{"@type":"PostalAddress","addressLocality":"Addis Ababa","addressCountry":"Ethiopia"},
+  "knowsAbout":["Software Engineering","Flutter","Dart","Firebase","Python","Data Analytics","Mobile Development","Full-Stack Development"],
+  "sameAs":["https://github.com/miki1007","https://www.linkedin.com/in/mikias-derseh-3a4101257"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Ethiopic:wght@400;500;600&family=Noto+Serif+Ethiopic:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#0c0b0a; --ink-2:#121110; --ink-3:#1a1816;
     --line:rgba(236,231,223,0.10); --line-strong:rgba(236,231,223,0.22);
     --cream:#ece7df; --cream-dim:#a8a299; --cream-faint:#6f6a63;
     --gold:#e6b34c; --gold-deep:#c4882a; --moss:#8aa378; --rust:#cf6b3f;
-    --display:"Fraunces", Georgia, serif;
-    --body:"Hanken Grotesk", system-ui, sans-serif;
+    --display:"Fraunces", "Noto Serif Ethiopic", Georgia, serif;
+    --body:"Hanken Grotesk", "Noto Sans Ethiopic", system-ui, sans-serif;
     --mono:"JetBrains Mono", monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -139,6 +159,40 @@
   .portrait .cap b{color:var(--gold);font-weight:500;}
   @media(max-width:840px){.portrait{max-width:340px;margin:0 auto 1rem;}.portrait .cap{display:none;}}
 
+  /* active nav (scroll-spy) */
+  .nav-links a.active{color:var(--cream);}
+  .nav-links a.active::after{width:100%;}
+  /* language toggle */
+  .langbtn{font-family:var(--mono);font-size:.7rem;color:var(--cream-dim);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;cursor:pointer;background:rgba(255,255,255,.02);}
+  .langbtn b{padding:.4rem .6rem;transition:background .3s,color .3s;font-weight:400;}
+  .langbtn b.on{background:var(--gold);color:var(--ink);}
+  .langbtn:hover{border-color:var(--gold-deep);}
+  [data-lang="am"] .term,[data-lang="am"] .kbd,[data-lang="am"] .langbtn,[data-lang="am"] .sec-no,[data-lang="am"] .pno,[data-lang="am"] .m-meta,[data-lang="am"] .m-tags span{font-family:var(--mono);}
+
+  /* 3D tech sphere */
+  .sphere-wrap{position:relative;width:100%;max-width:520px;height:420px;margin:0 auto;
+    opacity:0;transition:opacity 1s ease;cursor:grab;touch-action:none;}
+  .sphere-wrap.lit{opacity:1;}
+  .sphere-wrap:active{cursor:grabbing;}
+  .sphere-wrap::after{content:"drag to spin";position:absolute;left:50%;bottom:2px;transform:translateX(-50%);
+    font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-faint);
+    opacity:.6;pointer-events:none;}
+  .sphere{position:absolute;inset:0;}
+  .sphere-wrap .core{position:absolute;left:50%;top:50%;width:74px;height:74px;transform:translate(-50%,-50%);
+    border-radius:50%;border:1px solid rgba(230,179,76,.4);display:grid;place-items:center;
+    background:radial-gradient(circle,rgba(230,179,76,.12),transparent 70%);pointer-events:none;}
+  .sphere-wrap .core span{font-family:var(--display);font-style:italic;font-size:1.5rem;color:var(--gold);}
+  .tag{position:absolute;left:50%;top:50%;font-family:var(--mono);font-size:.95rem;white-space:nowrap;
+    color:var(--cream-dim);will-change:transform,opacity;transition:color .25s,text-shadow .25s;
+    -webkit-user-select:none;user-select:none;}
+  .tag:hover{color:var(--gold);text-shadow:0 0 14px rgba(230,179,76,.7);}
+  .tag.core-tech{color:#d8cbb0;}
+  .sphere-wrap.flat{height:auto;cursor:default;display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;padding:1rem 0;}
+  .sphere-wrap.flat::after,.sphere-wrap.flat .core{display:none;}
+  .sphere-wrap.flat .sphere{position:static;}
+  .sphere-wrap.flat .tag{position:static;transform:none!important;opacity:1!important;border:1px solid var(--line);border-radius:8px;padding:.35rem .7rem;}
+  .stack-cap{max-width:680px;margin:1.4rem auto 0;font-size:.92rem;color:var(--cream-faint);text-align:center;}
+
   /* projects */
   .projects{counter-reset:proj;}
   .project{border-top:1px solid var(--line-strong);padding:clamp(2rem,5vw,3.2rem) 0;display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1.2rem,4vw,3rem);align-items:center;position:relative;cursor:pointer;transition:transform .5s cubic-bezier(.16,1,.3,1);}
@@ -253,9 +307,41 @@
   .cmd .foot b{color:var(--cream-dim);font-weight:400;}
 
   @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;}.reveal{opacity:1;transform:none;}}
+
+  /* accessibility */
+  .skip{position:fixed;top:-60px;left:1rem;z-index:10002;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:.8rem;padding:.7rem 1.1rem;border-radius:8px;text-decoration:none;transition:top .25s;}
+  .skip:focus{top:1rem;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px;}
+  .project:focus-visible{outline-offset:6px;}
+
+  /* back-to-top */
+  .totop{position:fixed;right:1.4rem;bottom:1.4rem;z-index:90;width:46px;height:46px;border-radius:50%;border:1px solid var(--line-strong);background:rgba(12,11,10,.7);backdrop-filter:blur(10px);color:var(--cream);cursor:pointer;display:grid;place-items:center;font-size:1rem;opacity:0;transform:translateY(16px) scale(.9);pointer-events:none;transition:opacity .4s,transform .4s,background .3s,color .3s;}
+  .totop.show{opacity:1;transform:none;pointer-events:auto;}
+  .totop:hover{background:var(--gold);color:var(--ink);border-color:var(--gold);}
+
+  /* modal prev/next */
+  .m-nav{display:flex;gap:.6rem;margin-top:1.8rem;padding-top:1.4rem;border-top:1px solid var(--line);}
+  .m-nav button{flex:1;font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:var(--cream-dim);background:transparent;border:1px solid var(--line);border-radius:10px;padding:.7rem 1rem;cursor:pointer;transition:border-color .3s,color .3s,background .3s;display:flex;align-items:center;gap:.5rem;}
+  .m-nav button:hover{border-color:var(--gold-deep);color:var(--cream);}
+  .m-nav button.next{justify-content:flex-end;}
+  .m-nav .k{color:var(--gold);}
+
+  /* print: clean CV-style fallback */
+  @media print{
+    .progress,.pre,#field,.grain,.aurora,nav,.scroll-cue,.ticker,.totop,.cmd,.modal,.langbtn,.kbd{display:none!important;}
+    body{background:#fff;color:#111;}
+    .wrap{max-width:none;}
+    h1,.sec-title,.about-lead,.tnode h4,.contact .big{color:#111!important;}
+    h1 em,.sec-title em,.about-lead em,.contact .big em,.sec-no,.kicker{color:#9a6b00!important;}
+    .reveal{opacity:1!important;transform:none!important;}
+    .portrait img{filter:grayscale(1)!important;-webkit-mask-image:none!important;mask-image:none!important;}
+    section{padding:1.2rem 0!important;page-break-inside:avoid;}
+    a{color:#111!important;text-decoration:underline;}
+  }
 </style>
 </head>
 <body>
+  <a href="#about" class="skip">Skip to content</a>
   <div class="progress" id="progress"></div>
   <div class="pre" id="pre">
     <div class="pname"><span>Mikias Bayle Derseh</span></div>
@@ -277,6 +363,7 @@
         <a href="#stack"><span class="idx">04</span>Stack</a>
         <a href="#contact"><span class="idx">05</span>Contact</a>
       </div>
+      <div class="langbtn" id="langbtn" title="Switch language"><b class="on" data-l="en">EN</b><b data-l="am">&#4768;&#4635;</b></div>
       <div class="kbd" id="cmdOpen"><b>&#8984;</b> K &#183; Menu</div>
     </div>
   </nav>
@@ -324,7 +411,7 @@
             <p class="about-lead">A software engineering graduate building toward <em>international, product-driven engineering</em> — equal parts pragmatic builder and curious analyst.</p>
             <div class="about-body">
               <p>I hold a Bachelor's in Software Engineering and am currently pursuing a Master's in Computer Science with a specialization in Data Analytics. My day-to-day is split between shipping cross-platform mobile apps in Flutter and growing a foundation in Python, exploratory data analysis, and visualization.</p>
-              <p>I care about clean, scalable architecture, honest engineering decisions, and software that earns its place in someone's life. Most recently that means EnaniCare — a bilingual health companion I'm building for an elderly family member.</p>
+              <p>I've shipped real software in the field — building a maintenance-tracking and ticketing system as a mobile developer intern at the Ethiopian Space Science &amp; Geospatial Institute, after two and a half years as a technical consultant. I care about clean, scalable architecture and software that earns its place in someone's life — most recently EnaniCare, a bilingual health companion for an elderly family member.</p>
             </div>
           </div>
           <div class="meta-card reveal" style="margin-top:1.8rem;">
@@ -342,7 +429,7 @@
       <div class="sec-head reveal"><span class="sec-no">02</span><h2 class="sec-title">Selected <em>work</em></h2></div>
       <p class="reveal" style="color:var(--cream-faint);font-family:var(--mono);font-size:.78rem;margin:-2rem 0 2rem;">&#8595; Click any project for the full case study</p>
       <div class="projects">
-        <div class="project reveal" data-id="enani">
+        <div class="project reveal" data-id="enani" tabindex="0" role="button" aria-label="Open EnaniCare case study">
           <div class="pno"></div>
           <div class="project-main">
             <h3>EnaniCare</h3>
@@ -350,7 +437,7 @@
           </div>
           <div class="arrow"><span>Case study</span><span class="circ">&#8594;</span></div>
         </div>
-        <div class="project reveal" data-id="ticket">
+        <div class="project reveal" data-id="ticket" tabindex="0" role="button" aria-label="Open Mobile Ticketing System case study">
           <div class="pno"></div>
           <div class="project-main">
             <h3>Mobile Ticketing System</h3>
@@ -358,7 +445,7 @@
           </div>
           <div class="arrow"><span>Case study</span><span class="circ">&#8594;</span></div>
         </div>
-        <div class="project reveal" data-id="dir">
+        <div class="project reveal" data-id="dir" tabindex="0" role="button" aria-label="Open Local Business Directory case study">
           <div class="pno"></div>
           <div class="project-main">
             <h3>Local Business Directory</h3>
@@ -379,15 +466,21 @@
     <section id="journey">
       <div class="sec-head reveal"><span class="sec-no">03</span><h2 class="sec-title">The <em>journey</em> so far</h2></div>
       <div class="timeline reveal">
-        <div class="tnode"><div class="ring"><i></i></div><div class="yr">Now</div><h4>M.Sc. Computer Science &mdash; Data Analytics</h4><p>Deepening into Python, EDA and visualization while shipping production Flutter apps. Targeting international, product-driven engineering roles.</p></div>
-        <div class="tnode"><div class="ring"><i></i></div><div class="yr">Building</div><h4>EnaniCare &amp; client apps</h4><p>Architecting bilingual, modular Flutter apps with Firebase &mdash; auth, notifications, role-based access &mdash; with an eye on clean, scalable structure.</p></div>
-        <div class="tnode"><div class="ring"><i></i></div><div class="yr">Foundation</div><h4>B.Sc. Software Engineering</h4><p>Built the fundamentals: OOP, software architecture, databases and the discipline of turning ideas into shipped software.</p></div>
+        <div class="tnode"><div class="ring"><i></i></div><div class="yr">Now &middot; 2025</div><h4>M.Sc. Computer Science &mdash; Data Analytics</h4><p>Pursuing a Master's on weekends while building production Flutter apps like EnaniCare and growing into Python, EDA and visualization. Targeting international, product-driven engineering.</p></div>
+        <div class="tnode"><div class="ring"><i></i></div><div class="yr">2025</div><h4>B.Sc. Software Engineering &mdash; Debre Berhan University</h4><p>Graduated June 2025. The foundation: OOP, software architecture, databases and the discipline of turning ideas into shipped software.</p></div>
+        <div class="tnode"><div class="ring"><i></i></div><div class="yr">2024</div><h4>Mobile App Developer Intern &mdash; Ethiopian Space Science &amp; Geospatial Institute</h4><p>Built a maintenance-tracking and ticketing system in Flutter &mdash; dashboards, data-entry forms and an admin portal for assignments and performance data.</p></div>
+        <div class="tnode"><div class="ring"><i></i></div><div class="yr">2021 &ndash; 24</div><h4>Technical Consultant &mdash; ALAMI Industrial Engineering</h4><p>Provided technical analysis to telecom clients and helped build tools that improved communication networks and sales-data processes.</p></div>
       </div>
     </section>
 
     <section id="stack">
       <div class="sec-head reveal"><span class="sec-no">04</span><h2 class="sec-title">Tools of the <em>trade</em></h2></div>
-      <div class="skills-grid reveal">
+      <div class="sphere-wrap" id="prof">
+        <div class="sphere" id="sphere"></div>
+        <div class="core"><span>M.</span></div>
+      </div>
+      <p class="stack-cap">My toolkit, in orbit &mdash; grab it and give it a spin.</p>
+      <div class="skills-grid reveal" style="margin-top:1.6rem;">
         <div class="skill"><h4><span class="n">/</span> Mobile</h4><ul><li>Flutter</li><li>Dart</li><li>Material Design</li><li>State Management</li><li>iOS &#183; Android</li></ul></div>
         <div class="skill"><h4><span class="n">/</span> Backend &amp; Cloud</h4><ul><li>Firebase</li><li>Authentication</li><li>Firestore</li><li>Cloud Notifications</li><li>REST APIs</li></ul></div>
         <div class="skill"><h4><span class="n">/</span> Data &amp; Analytics</h4><ul><li>Python</li><li>Pandas</li><li>EDA</li><li>Data Visualization</li><li>SQL</li></ul></div>
@@ -400,6 +493,7 @@
         <p class="big reveal">Let's build <br><em><a href="mailto:mikiyasbaile4@gmail.com" class="magnetic">something real.</a></em></p>
         <p class="sub reveal">Open to internships, junior engineering roles &amp; collaboration.</p>
         <div class="links reveal">
+          <a class="magnetic" href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIgL0Y0IDUgMCBSCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMSAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL0Jhc2VGb250IC9UaW1lcy1Sb21hbiAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjIgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago0IDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YzIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNSAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1PYmxpcXVlIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GNCAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0NvbnRlbnRzIDEwIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDkgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIC9UcmFucyA8PAoKPj4gCiAgL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL1BhZ2VNb2RlIC9Vc2VOb25lIC9QYWdlcyA5IDAgUiAvVHlwZSAvQ2F0YWxvZwo+PgplbmRvYmoKOCAwIG9iago8PAovQXV0aG9yIChNaWtpYXMgQmF5bGUgRGVyc2VoKSAvQ3JlYXRpb25EYXRlIChEOjIwMjYwNjA4MDc1MTE4KzAwJzAwJykgL0NyZWF0b3IgKFwodW5zcGVjaWZpZWRcKSkgL0tleXdvcmRzICgpIC9Nb2REYXRlIChEOjIwMjYwNjA4MDc1MTE4KzAwJzAwJykgL1Byb2R1Y2VyIChSZXBvcnRMYWIgUERGIExpYnJhcnkgLSBcKG9wZW5zb3VyY2VcKSkgCiAgL1N1YmplY3QgKFwodW5zcGVjaWZpZWRcKSkgL1RpdGxlIChNaWtpYXMgQmF5bGUgRGVyc2VoIFwyMDQgQ1YpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKOSAwIG9iago8PAovQ291bnQgMSAvS2lkcyBbIDYgMCBSIF0gL1R5cGUgL1BhZ2VzCj4+CmVuZG9iagoxMCAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAyNDg3Cj4+CnN0cmVhbQpHYXVgVT4/QmlFJnE5IkZlNUlIJCMyR081SWJRW146MWU0T0xTUmA3IiMjUCwsVDsnUDguKzI+WU1ZTGpNJmQzcjAqSz9WJCs9QUVXVHBQXFdhbC9oSVlkZXAxNFcuNnBpbylUMyYkYSZuTFAxdD0icC1hckd0QixSRCZjM2kpcm5rOCwqMnM9RVlCPFRiIUcwSDlUMDshPDVAc01eKUpjMiFhMVopNldAVydDKXVyPUtkLE1SR1chNmk9Z1cxKTRXSytnJSUoaHIhZWtJW0ZEdFxlITk6PS9dalJWPy1DaDRbLHRGPGErWyhBUiJPSypGcjVMNEgsTDVmISVkLik/QiIwY25KSyFVIlxkaTklLF8+RSEoUVQ4aTRtbF8jcF0/aGlvZDFHLEljJzZIXGIpZVBVMW1oWE9eRSZIIkNlNT1iNHVQWG42YSE2OjAyUltII0AlTjVDNSNOKFkhXWwnLmRUOmI/c3RpajtiYGVkOTM+IitOOW9XVyJRI0BdKzk9THRmSWByQG0kNzo1ODFeVFEzWU1iLk4zVTFBblBDK3VALWosMCgob1FLdE5hcEpLNl9bXzZhUVBpbTcsYGNFcXVrQFE/M1ZfZEImST1oLSQ8W0U4NF1oVFxcWTdwOVRuZXJrZTIjQGUncnEiMjxAW2s7TD9HQT4jNzA1LUwiMVltKGIwQUJRR1ZRSDdmRSM8UzBSYlExTHIuYGtIWj9KTSRzXFRfS0ZuayQ/WjNZYE4zN25gPjc7Xy0kOSxpPUg1ZEgybURpVSdOcEMxSz1XbXVeODpHN2xOYzJuTylVMlMnREFwJGlqZE5sbVE7YmVGVSVnY05DXilfZ18yS2cyYyJTPVxiT24jJGJnZDRSKHBKRChGMmVALyhVK0htW2AxaHEjSihrP3BtYUd1RWFWKzU5TCJqdGkmUD5lJ09jZSpoUXNSa0FbcE1lRDZbVEJjTzVrNGBVVHBkayZlR2AzNlw9cVchNXM8LGFUbEoraVRVVWM0Y1g1O1dNa2guVEYzOG5KdEQoPCJKKHFVaGNmbzMuVkdpZlRdIV9aMV10XkJ0NTY2UWReUEQ9WDFNWzpUNlI0UHBsJyclTVRaP2wyYWliRWtQV2s2QGlQQCM9WUEpN0MoSz9RITNMbVpRZVM0Jj5fXWMnUEo/bVF1Jm5UWFg+dUgncjBIQzZKUi5BV185IkEuJjciO0k2KGB1TTExJkI+JnVPNmFEI2MlcFQ8KEQscVpmMTwnWUFKUW5NPmlRWSxxNj4+aTlOV3UkaSpnSUJFcV5kJWJDZkFYdGZHXlwvKEoocUUlS0FiWEpTNXMxUkF0VyxZMFZOPl9GV1UnXGFkQ2g+aDVPUFVjS2ZBVV9WVmZOblI/SCM9S1JZYyVAM0IzT211UD0pTEZJMUBsW3V0bEk/TjpdYz5ZQk9pKUU0MHNucWwpLkZdR09xaSJrLXBgZk5FaUhRUC8lNCVZREBrRUMvVWFwa1xALDpqN0kmKS9CYm0zdGYoKHBScDxiK2BqcFs6TT5jNk40TlgqJVInPlNhMURtIWh0Oi00WFlqbzN1bWhwPzdSYz1eblZRM0AwVl9RL08oYDUkNyNtUisvR1tJTWNbSmRaJC4mL2ktakZWUEhsVlkmUzQ6WU1TUU5wQW1ub2FcW2VZVVZGYVo4YTBPYmU4Nyg/RWZxRCEpQWZQYWRsMkluaithayFDXUNjbD0wUWUmJT5LKFVAUElQWFpDYGEtOnRJMyFHMV1iOWQyZGs+PSYzX1ZOSDgiOXNMIVhTQmEiSGJnTThAUls7JClSVHNCWSllYEQ9QWVQKi04Vkswc0BgaEU0UkNBWkgzZCo6LktLJGpgMlI7X2BuOFtAKDcsc0hBJSFtSEwxPkpKOGBbJCteS0wuNSdjTXNxQkpAaVIrLHNcRVlCJTs1XCU+WklYKGUhQ1REbkw7Oz81MmFbYD5gWXMjcVNtJVAlYl82ci8wNV1YLC8qKVVUNUozbDdkTS1qLWxGIUFeY2w9JFhtcDtaLzYjIkQlP2cvcWldRihXS3RpUEM1Ri1uJiZDa2pYMjNzMmRgdVlcUS1dcHJnc2gqdGFbJyNbT0tkbD8wakFBQytYSUFBVklHSTlnNjtDbmFSZkFeaklnUVBgPCxsTCc6Pi5fYiZabTtBRTglKVNQP2gtQyE6NGs/Ji4mKUdvOF1yL0pKOSwiazBrNFZJTDkpO0RYR0VXUC9bMVdnYTwvZEw9I2VLPU01TDtXVlhyQCNpZjZvWipKPj01SzlpMkwyXlw2OW05R1NKSjNYMEAqPDpaLjAhPDleMC4nZys/IzoyVVhXQGlFVG44MWwwOHNDZC4kWllePlQ8TmFPO2MlUTFrPG9aZl1eQ1t1KzRaVD4zLF08JjROZDRNLyYoO1pmVGdCTEYvSSZxMF5pVDVuKkRwI0hTVGwoJjBQJFs+TGdZI3NpcUp0RG0kMEhYNCtLXltpYEtwUCxYVVtlPidINiJTZHQrVEg8Yi84PV4wVFdzVzU1T2RsVCNRaDRbLktFKzZYLGJqYkxNSW0xJFRNTjNOUDBDVFxOOTNXXionOChlR0FCMTx0L1w4S3NpYl9sZWU0KEVLWSI6JERFMG9QYmJicEFBOW0zKitPVF9LIklxKl5EbVZUKkpvTjlgaiw8ZnVrWTdFS15JZGNPXi1RTGZHTSxVVWVxS1U9cjRvV1NTJz5OL20oK0Zcc0hjPllHTmxxVTwkaCNjWHRLbmc/O0QkPTctNmNdM0o/IVdIZUFKKipLOC0xKmlSQ044bTRHOS5aR0oxQT45LiUnOGYrdW5ObEk0b2IrN3M5cD84STheWlhvOzRhSzU1RWtZUUBjaGNHVS9jZiJdX1RfMVJuVDJWRW5bV0hYZWQmdUAkM2xNPFxfYDdMWEtEKkdsL1MkXiRtJGRiSHI0ZUJlRXJWY0BjZDw+TmJ1ckUwbSZJIU03LWpAJzBUc1NSclBQXmI9Vk03JmVGQVxWLSRySklxTnRyJyNvMkAmMi0/XDNmaF9ETCVFSDw8NCdrUjcsbl4obzJGYj0pXGRpNXUpbSZiNDg9IyhKZihuP1dnYUIkYV5cWTFiOyZpJ1hrOnFBMy9fYmk+QCssKlZSKypnUFgkMm1uYiRHST5vbDheYihkTGQrWUVjMDYzbzBAOF1KWlpxXiledGFhNnREdWZrczxKTFtzL2FjTzZiU1gyNEpqXCYlMTFcJ1E9TUQkPlxEWm9rOFpEWi9bYVcqYUovKnBAR2hrTjg9S2VPVmxQS19hPylZP25xLDdvVEBRcFJYTl9IL1t0OjZTT3Nifj5lbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCAxMQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwNjEgMDAwMDAgbiAKMDAwMDAwMDEyMiAwMDAwMCBuIAowMDAwMDAwMjI5IDAwMDAwIG4gCjAwMDAwMDAzMzggMDAwMDAgbiAKMDAwMDAwMDQ1MCAwMDAwMCBuIAowMDAwMDAwNTY1IDAwMDAwIG4gCjAwMDAwMDA3NjkgMDAwMDAgbiAKMDAwMDAwMDgzNyAwMDAwMCBuIAowMDAwMDAxMTM3IDAwMDAwIG4gCjAwMDAwMDExOTYgMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8Njc1ZDk0ODQ3ZThkOTkyODlmZTgzMDM5ZGFkYTBhZGE+PDY3NWQ5NDg0N2U4ZDk5Mjg5ZmU4MzAzOWRhZGEwYWRhPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA4IDAgUgovUm9vdCA3IDAgUgovU2l6ZSAxMQo+PgpzdGFydHhyZWYKMzc3NQolJUVPRgo=" download="Mikias-Bayle-Derseh-CV.pdf" style="background:var(--gold);color:var(--ink);border-color:var(--gold);">&#8675; Download CV</a>
           <a class="magnetic" href="mailto:mikiyasbaile4@gmail.com">&#9993; mikiyasbaile4@gmail.com</a>
           <a class="magnetic" href="https://github.com/miki1007" target="_blank" rel="noopener">&#8599; GitHub</a>
           <a class="magnetic" href="https://www.linkedin.com/in/mikias-derseh-3a4101257" target="_blank" rel="noopener">&#8599; LinkedIn</a>
@@ -408,6 +502,7 @@
     </section>
   </div>
 
+  <button class="totop" id="totop" aria-label="Back to top">&#8593;</button>
   <footer>
     <div class="wrap"><div class="foot-row">
       <span><span class="dot"></span>Available for new work &#183; 2025</span>
@@ -438,6 +533,10 @@
           <div class="m-h">What I built</div>
           <ul class="m-list" id="mList"></ul>
           <div class="m-tags" id="mTags"></div>
+          <div class="m-nav">
+            <button class="prev" id="mPrev" aria-label="Previous project"><span class="k">&#8592;</span> <span id="mPrevLabel">Prev</span></button>
+            <button class="next" id="mNext" aria-label="Next project"><span id="mNextLabel">Next</span> <span class="k">&#8594;</span></button>
+          </div>
         </div>
       </div>
     </div>
@@ -466,9 +565,11 @@
   })();
 
   /* progress + nav */
-  const nav=document.getElementById('nav'),prog=document.getElementById('progress');
+  const nav=document.getElementById('nav'),prog=document.getElementById('progress'),totop=document.getElementById('totop');
   addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>40);
+    if(totop)totop.classList.toggle('show',scrollY>700);
     const h=document.documentElement;prog.style.width=(scrollY/(h.scrollHeight-h.clientHeight)*100)+'%';});
+  if(totop)totop.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
 
   /* ---- interactive dot field (canvas) ---- */
   (function(){
@@ -522,10 +623,10 @@
       overview:'A bilingual (Amharic / English) health-companion app I built for an elderly family member — turning everyday care into something calm, clear and dependable.',
       bullets:['Medication reminders and daily health logging with gentle, accessible UI','Vitals tracking with custom-painted weekly trend charts and a cholesterol dashboard','"Abeba" — an in-app AI assistant offering friendly, plain-language guidance','Modular architecture prepared for Firebase auth, notifications & role-based access'],
       stack:['Flutter','Dart','Firebase','Local Notifications','Custom Charts','Amharic/EN']},
-    ticket:{title:'Mobile Ticketing System',color:'gold',year:'2024',role:'Mobile & backend',type:'Mobile · Operations',
-      overview:'A cross-platform ticketing & booking platform designed around real operational workflows — built so both customers and staff have exactly the view they need.',
-      bullets:['Booking flow with ticket generation and live status updates','Role-based access separating admin and technician workflows','Firebase Authentication and push notifications for real-time updates','Clean, scalable architecture ready to grow alongside the product'],
-      stack:['Flutter','Firebase','Auth','Firestore','Cloud Messaging','Role-Based Access']},
+    ticket:{title:'Mobile Ticketing System',color:'gold',year:'2024',role:'Mobile App Developer Intern',type:'Ethiopian Space Science & Geospatial Institute',
+      overview:'A maintenance-tracking and ticketing system built during my internship at the Ethiopian Space Science & Geospatial Institute — designed to enhance reporting, task monitoring and accountability.',
+      bullets:['Developed and maintained the maintenance-tracking app for reporting and task monitoring','Designed user-friendly Flutter dashboards and data-entry forms','Supported an admin portal for ticketing, assignments and performance data','Focused on data accuracy, system documentation and team collaboration'],
+      stack:['Flutter','Firebase','Dashboards','Admin Portal','Ticketing','Reporting']},
     dir:{title:'Local Business Directory',color:'rust',year:'2023',role:'Mobile developer',type:'Mobile · Discovery',
       overview:'A discovery app that helps people find nearby businesses fast — search, filter and browse by category, all from the phone in their pocket.',
       bullets:['Category-based browsing with fast search and filtering','Rich business profiles with contact, hours and location details','Map & geolocation to surface what is nearby','Structured data model built for scale and easy listing management'],
@@ -533,7 +634,8 @@
   };
   const GLOW={moss:'radial-gradient(120% 90% at 30% 8%,rgba(138,163,120,.9),rgba(18,28,16,.96))',gold:'radial-gradient(120% 90% at 30% 8%,rgba(230,179,76,.9),rgba(40,28,8,.96))',rust:'radial-gradient(120% 90% at 30% 8%,rgba(207,107,63,.9),rgba(40,16,8,.96))'};
   const modal=document.getElementById('modal');
-  function openProject(id){const p=PROJECTS[id];if(!p)return;
+  const ORDER=['enani','ticket','dir'];let curProj=0,lastFocus=null;
+  function fillProject(id){const p=PROJECTS[id];if(!p)return;curProj=ORDER.indexOf(id);
     document.getElementById('mTitle').textContent=p.title;
     document.getElementById('mPhoneName').textContent=p.title;
     document.getElementById('mGlow').style.background=GLOW[p.color];
@@ -541,10 +643,31 @@
     document.getElementById('mOverview').textContent=p.overview;
     document.getElementById('mList').innerHTML=p.bullets.map(b=>`<li>${b}</li>`).join('');
     document.getElementById('mTags').innerHTML=p.stack.map(s=>`<span>${s}</span>`).join('');
-    modal.classList.add('open');document.body.style.overflow='hidden';}
-  function closeModal(){modal.classList.remove('open');document.body.style.overflow='';}
-  document.querySelectorAll('[data-id]').forEach(el=>el.addEventListener('click',()=>openProject(el.dataset.id)));
+    const prev=PROJECTS[ORDER[(curProj+ORDER.length-1)%ORDER.length]],next=PROJECTS[ORDER[(curProj+1)%ORDER.length]];
+    document.getElementById('mPrevLabel').textContent=prev.title;
+    document.getElementById('mNextLabel').textContent=next.title;
+    const sheet=modal.querySelector('.sheet');if(sheet)sheet.scrollTop=0;}
+  function openProject(id){fillProject(id);lastFocus=document.activeElement;
+    modal.classList.add('open');document.body.style.overflow='hidden';
+    setTimeout(()=>{const c=modal.querySelector('.m-close');c&&c.focus();},80);}
+  function closeModal(){modal.classList.remove('open');document.body.style.overflow='';
+    if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+  function stepProject(d){fillProject(ORDER[(curProj+d+ORDER.length)%ORDER.length]);}
+  document.querySelectorAll('[data-id]').forEach(el=>{
+    el.addEventListener('click',()=>openProject(el.dataset.id));
+    el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProject(el.dataset.id);}});});
   modal.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',closeModal));
+  document.getElementById('mPrev').addEventListener('click',()=>stepProject(-1));
+  document.getElementById('mNext').addEventListener('click',()=>stepProject(1));
+  /* focus trap + arrow nav inside modal */
+  modal.addEventListener('keydown',e=>{
+    if(e.key==='ArrowLeft')stepProject(-1);
+    if(e.key==='ArrowRight')stepProject(1);
+    if(e.key==='Tab'){const f=[...modal.querySelectorAll('button')];if(!f.length)return;
+      const first=f[0],last=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
+  });
 
   /* ---- command palette ---- */
   const cmd=document.getElementById('cmd'),cmdInput=document.getElementById('cmdInput'),cmdList=document.getElementById('cmdList');
@@ -560,6 +683,7 @@
     {ico:'&#9632;',label:'Case study — Mobile Ticketing System',hint:'Project',act:()=>{closeCmd();openProject('ticket');}},
     {ico:'&#9632;',label:'Case study — Local Business Directory',hint:'Project',act:()=>{closeCmd();openProject('dir');}},
     {ico:'&#9993;',label:'Email Mikias',hint:'Link',act:()=>{location.href='mailto:mikiyasbaile4@gmail.com';}},
+    {ico:'&#8675;',label:'Download CV (PDF)',hint:'Action',act:()=>{closeCmd();const a=document.querySelector('a[download]');if(a)a.click();}},
     {ico:'&#8599;',label:'Open GitHub',hint:'Link',act:()=>{window.open('https://github.com/miki1007','_blank');}},
     {ico:'&#8599;',label:'Open LinkedIn',hint:'Link',act:()=>{window.open('https://www.linkedin.com/in/mikias-derseh-3a4101257','_blank');}}
   ];
@@ -569,8 +693,9 @@
       el.addEventListener('mouseenter',()=>{active=+el.dataset.i;highlight();});});}
   function highlight(){cmdList.querySelectorAll('.item').forEach((el,i)=>el.classList.toggle('active',i===active));}
   function filterCmd(q){q=q.toLowerCase().trim();filtered=COMMANDS.filter(c=>c.label.toLowerCase().includes(q));active=0;renderCmd();}
-  function openCmd(){cmd.classList.add('open');document.body.style.overflow='hidden';cmdInput.value='';filtered=COMMANDS.slice();active=0;renderCmd();setTimeout(()=>cmdInput.focus(),60);}
-  function closeCmd(){cmd.classList.remove('open');document.body.style.overflow='';}
+  function openCmd(){cmdLast=document.activeElement;cmd.classList.add('open');document.body.style.overflow='hidden';cmdInput.value='';filtered=COMMANDS.slice();active=0;renderCmd();setTimeout(()=>cmdInput.focus(),60);}
+  function closeCmd(){cmd.classList.remove('open');document.body.style.overflow='';if(cmdLast&&cmdLast.focus)cmdLast.focus();}
+  let cmdLast=null;
   document.getElementById('cmdOpen').addEventListener('click',openCmd);
   cmd.querySelector('[data-cmdclose]').addEventListener('click',closeCmd);
   cmdInput.addEventListener('input',e=>filterCmd(e.target.value));
@@ -583,6 +708,111 @@
       if(e.key==='Enter'){e.preventDefault();filtered[active]&&filtered[active].act();}
     }
   });
+
+  /* ---- 3D interactive tech sphere ---- */
+  const rio=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;
+    e.target.classList.add('lit');rio.unobserve(e.target);});},{threshold:.3});
+  (function(){
+    const wrap=document.getElementById('prof'), sphere=document.getElementById('sphere');
+    if(!wrap||!sphere)return;
+    rio.observe(wrap);
+    const TECH=[['Flutter',1],['Dart',1],['Firebase',1],['Python',1],['Pandas',1],['SQL',1],
+      ['Firestore',0],['EDA',0],['Git',0],['REST APIs',0],['State Mgmt',0],['Clean Arch',0],
+      ['Dashboards',0],['Data Viz',0],['Auth',0],['Notifications',0],['Material',0],['Excel',0]];
+    const N=TECH.length;
+    const tags=TECH.map(([t,c])=>{const el=document.createElement('span');el.className='tag'+(c?' core-tech':'');el.textContent=t;sphere.appendChild(el);return el;});
+    const pts=[],ga=Math.PI*(3-Math.sqrt(5));
+    for(let i=0;i<N;i++){const y=1-(i/(N-1))*2,r=Math.sqrt(1-y*y),th=ga*i;pts.push([Math.cos(th)*r,y,Math.sin(th)*r]);}
+    let R=Math.max(95,Math.min(160,wrap.clientWidth*0.34));
+    addEventListener('resize',()=>{R=Math.max(95,Math.min(160,wrap.clientWidth*0.34));});
+    if(reduce){wrap.classList.add('flat');return;}
+    let rotX=0.35,rotY=0,vX=0,vY=0.0032,dragging=false,lx=0,ly=0;const idle=0.0032;
+    function frame(){
+      if(!dragging){vY+=(idle-vY)*0.02;vX*=0.93;}
+      rotY+=vY;rotX+=vX;
+      const cy=Math.cos(rotY),sy=Math.sin(rotY),cx=Math.cos(rotX),sx=Math.sin(rotX);
+      for(let i=0;i<N;i++){let[x,y,z]=pts[i];
+        const x1=x*cy+z*sy,z1=-x*sy+z*cy,y1=y;
+        const y2=y1*cx-z1*sx,z2=y1*sx+z1*cx,x2=x1;
+        const d=(z2+1)/2,sc=0.55+d*0.62,el=tags[i];
+        el.style.transform=`translate(-50%,-50%) translate(${(x2*R).toFixed(1)}px,${(y2*R).toFixed(1)}px) scale(${sc.toFixed(2)})`;
+        el.style.opacity=(0.3+d*0.7).toFixed(2);el.style.zIndex=(d*100)|0;
+        el.style.filter=d<0.4?`blur(${((0.4-d)*3).toFixed(1)}px)`:'none';}
+      requestAnimationFrame(frame);
+    }
+    frame();
+    wrap.addEventListener('pointerdown',e=>{dragging=true;lx=e.clientX;ly=e.clientY;try{wrap.setPointerCapture(e.pointerId);}catch(_){}}); 
+    wrap.addEventListener('pointermove',e=>{if(!dragging)return;const dx=e.clientX-lx,dy=e.clientY-ly;lx=e.clientX;ly=e.clientY;
+      vY=dx*0.0009;vX=-dy*0.0009;rotY+=dx*0.005;rotX+=-dy*0.005;});
+    const end=()=>dragging=false;
+    wrap.addEventListener('pointerup',end);wrap.addEventListener('pointercancel',end);wrap.addEventListener('pointerleave',end);
+  })();
+
+  /* ---- scroll-spy nav ---- */
+  const navMap=[...document.querySelectorAll('.nav-links a')];
+  const secs=navMap.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){
+    navMap.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}});},{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(s=>spy.observe(s));
+
+  /* ---- portrait 3D parallax ---- */
+  if(!reduce){const pf=document.querySelector('.portrait');const fr=pf&&pf.querySelector('.frame');
+    if(fr){pf.style.perspective='900px';
+      pf.addEventListener('mousemove',e=>{const r=pf.getBoundingClientRect();
+        const rx=((e.clientY-r.top)/r.height-.5)*-6,ry=((e.clientX-r.left)/r.width-.5)*6;
+        fr.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg)`;fr.style.transition='transform .1s';});
+      pf.addEventListener('mouseleave',()=>{fr.style.transition='transform .6s';fr.style.transform='';});}}
+
+  /* ---- bilingual EN / አማርኛ ---- */
+  const AM={
+    nav:['<span class="idx">01</span>ስለ እኔ','<span class="idx">02</span>ስራዎች','<span class="idx">03</span>ጉዞ','<span class="idx">04</span>ቴክኖሎጂ','<span class="idx">05</span>አግኙኝ'],
+    kicker:'ሶፍትዌር መሐንዲስ · የኮምፒውተር ሳይንስ ማስተርስ',
+    statement:'እውነተኛ ችግሮችን የሚፈቱ የሞባይል እና ሙሉ-ስታክ ሶፍትዌሮችን <b>እሰራለሁ</b> — ከጤና አጃቢ መተግበሪያ እስከ የቲኬት ስርዓት — በዳታ ትንተና ክህሎቴን እያሳደግሁ።',
+    titles:['ከኮዱ ጀርባ ያለው <em>ሰው</em>','የተመረጡ <em>ስራዎች</em>','እስካሁን ያለው <em>ጉዞ</em>','የስራ <em>መሳሪያዎች</em>'],
+    hint:'ሙሉ ዝርዝር ለማየት ማንኛውንም ፕሮጀክት ይጫኑ',
+    lead:'ወደ ዓለም አቀፍ፣ ምርት-ተኮር ምህንድስና የሚያመራ <em>የሶፍትዌር ምህንድስና ምሩቅ</em> — በተግባር ላይ ያተኮረ ገንቢ እና ጉጉ ተንታኝ።',
+    contactBig:'እንገንባ<br><em><a href="mailto:mikiyasbaile4@gmail.com" class="magnetic">አንድ እውነተኛ ነገር።</a></em>',
+    contactSub:'ለኢንተርንሺፕ፣ ለጁኒየር የምህንድስና ስራዎች እና ለትብብር ክፍት ነኝ።',
+    journeyYr:['አሁን · 2025','2025','2024','2021 – 24'],
+    journeyH:['የኮምፒውተር ሳይንስ ማስተርስ — ዳታ ትንታኔ','የሶፍትዌር ምህንድስና ዲግሪ — ደብረ ብርሃን ዩኒቨርሲቲ','የሞባይል መተግበሪያ ገንቢ ኢንተርን — የኢትዮጵያ ስፔስ ሳይንስ ኢንስቲትዩት','ቴክኒካል አማካሪ — ኣላሚ ኢንዱስትሪያል ኢንጂነሪንግ']
+  };
+  const langbtn=document.getElementById('langbtn');
+  const cache=new WeakMap();
+  function setHTML(el,html){if(!cache.has(el))cache.set(el,el.innerHTML);el.innerHTML=html;}
+  function restore(el){if(cache.has(el))el.innerHTML=cache.get(el);}
+  function rebind(){ // re-attach magnetic on regenerated nodes
+    if(reduce)return;document.querySelectorAll('.magnetic').forEach(el=>{
+      el.onmousemove=e=>{const r=el.getBoundingClientRect();el.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.3}px,${(e.clientY-r.top-r.height/2)*.4}px)`;};
+      el.onmouseleave=()=>el.style.transform='';});}
+  function applyLang(lang){
+    document.body.setAttribute('data-lang',lang);document.documentElement.lang=lang==='am'?'am':'en';
+    langbtn.querySelectorAll('b').forEach(b=>b.classList.toggle('on',b.dataset.l===lang));
+    const navA=[...document.querySelectorAll('.nav-links a')];
+    const titles=[...document.querySelectorAll('.sec-title')];
+    const yrs=[...document.querySelectorAll('.tnode .yr')];
+    const hs=[...document.querySelectorAll('.tnode h4')];
+    if(lang==='am'){
+      navA.forEach((a,i)=>AM.nav[i]&&setHTML(a,AM.nav[i]));
+      setHTML(document.querySelector('.kicker'),AM.kicker);
+      setHTML(document.querySelector('.hero-statement'),AM.statement);
+      titles.forEach((t,i)=>AM.titles[i]&&setHTML(t,AM.titles[i]));
+      const hint=document.querySelector('#work p.reveal');if(hint)setHTML(hint,AM.hint);
+      setHTML(document.querySelector('.about-lead'),AM.lead);
+      setHTML(document.querySelector('.contact .big'),AM.contactBig);
+      setHTML(document.querySelector('.contact .sub'),AM.contactSub);
+      yrs.forEach((y,i)=>AM.journeyYr[i]&&setHTML(y,AM.journeyYr[i]));
+      hs.forEach((h,i)=>AM.journeyH[i]&&setHTML(h,AM.journeyH[i]));
+    }else{
+      [...navA,document.querySelector('.kicker'),document.querySelector('.hero-statement'),...titles,
+       document.querySelector('#work p.reveal'),document.querySelector('.about-lead'),
+       document.querySelector('.contact .big'),document.querySelector('.contact .sub'),...yrs,...hs].forEach(el=>el&&restore(el));
+    }
+    rebind();
+  }
+  let curLang='en';
+  langbtn.addEventListener('click',()=>{curLang=curLang==='en'?'am':'en';
+    try{localStorage.setItem('lang',curLang);}catch(e){}applyLang(curLang);});
+  try{const saved=localStorage.getItem('lang');if(saved==='am'){curLang='am';applyLang('am');}}catch(e){}
 </script>
 </body>
 </html>
